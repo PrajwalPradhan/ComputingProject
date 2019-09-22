@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.smartnotifier.UI.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="715dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200sp"
+            android:background="@drawable/login_bg">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200sp"
+                android:layout_height="70sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50sp"
+                app:srcCompat="@drawable/logo" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="350sp"
+            android:elevation="2dp"
+            android:layout_marginTop="-20sp"
+            android:layout_gravity="center"
+            android:layout_height="300sp"
+            android:orientation="vertical"
+            android:padding="20sp"
+            android:background="@drawable/rounded_corner"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:gravity="center"
+                android:textColor="#e54b3b"
+                android:layout_marginTop="30sp"
+                android:textSize="20sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                style="@style/formLabel"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Email" />
+
+            <TextView
+                android:id="@+id/textView33333333333333333"
+                android:layout_width="match_parent"
+                style="@style/formLabel"
+                android:layout_marginTop="20sp"
+                android:layout_height="wrap_content"
+                android:text="Password" />
+
+            <EditText
+                android:id="@+id/txt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="Password" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_marginTop="20sp"
+                android:layout_width="120sp"
+                android:layout_height="35sp"
+                android:layout_gravity="center"
+                android:background="#e54b3b"
+                android:onClick="processLogin"
+                android:textColor="#FFF"
+                android:text="Login" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

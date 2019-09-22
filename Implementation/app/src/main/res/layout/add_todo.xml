@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="16sp"
+    >
+
+
+    <EditText
+        android:id="@+id/todo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Todo Title"/>
+
+    <EditText
+        android:id="@+id/todo_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Todo Date"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:layout_below="@id/todo_title"
+        android:layout_marginTop="10sp"/>
+
+    <EditText
+        android:layout_marginTop="10sp"
+        android:id="@+id/todo_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Todo Time"
+        android:focusable="false"
+        android:inputType="textPersonName"
+        android:layout_below="@id/todo_date"/>
+
+    <Spinner
+        android:id="@+id/spinner_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todo_time"
+        android:layout_marginTop="10sp"
+        android:entries="@array/todo_type"
+        />
+
+
+    <TextView
+        android:id="@+id/priority_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:layout_below="@id/spinner_type"
+        android:text="Priority"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@id/priority_label"
+        >
+
+        <RadioButton
+            android:id="@+id/radButton1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#af0832"
+            android:checked="true"
+            android:text="High"
+            android:theme="@style/WhiteRadioButton"
+            />
+
+        <RadioButton
+            android:id="@+id/radButton2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#d6a30a"
+            android:text="Medium"
+            android:theme="@style/WhiteRadioButton"/>
+
+        <RadioButton
+            android:id="@+id/radButton3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#078d1f"
+            android:text="Low"
+            android:theme="@style/WhiteRadioButton"/>
+
+    </RadioGroup>
+</RelativeLayout>
